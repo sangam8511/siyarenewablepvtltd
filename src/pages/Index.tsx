@@ -13,7 +13,6 @@ import {
   Sun,
   TrendingUp,
   Award,
-  MapPin,
 } from "lucide-react";
 import heroImage from "@/assets/hero-solar.jpg";
 import projectRooftop from "@/assets/project-rooftop.jpg";
@@ -80,7 +79,7 @@ const Index = () => {
     {
       name: "Rajesh Kumar",
       company: "Kumar Industries",
-      text: "Siya Renewable transformed our energy costs. The installation was seamless and the team was highly professional.",
+      text: "Siya Renewables transformed our energy costs. The installation was seamless and the team was highly professional.",
       rating: 5,
     },
     {
@@ -124,7 +123,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 lg:px-8 pt-24 pb-16">
           <div className="max-w-3xl">
             <div className="animate-fade-in-up">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                 <Zap className="w-4 h-4" />
                 Leading Solar EPC in Eastern India
               </span>
@@ -132,11 +131,11 @@ const Index = () => {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up animation-delay-100">
               Power Your Future with{" "}
-              <span className="text-primary">Clean Solar Energy</span>
+              <span className="text-gradient-primary">Clean Solar Energy</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
-              Siya Renewable delivers turnkey solar power solutions across
+              Siya Renewables delivers turnkey solar power solutions across
               Jharkhand, Uttar Pradesh & Bihar. From design to commissioning, we
               power industries with sustainable energy.
             </p>
@@ -180,7 +179,7 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-primary py-16 relative overflow-hidden">
+      <section className="bg-gradient-primary py-16 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.3),transparent_50%)]" />
         </div>
@@ -224,7 +223,7 @@ const Index = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group bg-card p-8 rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-1"
+                className="group bg-card p-8 rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border border-border/50"
               >
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                   <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
@@ -262,7 +261,7 @@ const Index = () => {
                 Your Trusted Local Solar Partner
               </h2>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Siya Renewable stands apart with deep local expertise in
+                Siya Renewables stands apart with deep local expertise in
                 Jharkhand, UP & Bihar. Unlike large national players, we offer
                 personalized attention, faster execution, and reliable
                 after-sales support right at your doorstep.
@@ -292,9 +291,9 @@ const Index = () => {
                 alt="Solar installation team at work"
                 className="relative rounded-2xl shadow-strong w-full"
               />
-              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-strong">
+              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-strong border border-border/50">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
                     <Users className="w-6 h-6 text-accent-foreground" />
                   </div>
                   <div>
@@ -386,7 +385,7 @@ const Index = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all"
+                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all border border-border/30"
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -414,7 +413,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-28 bg-primary relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-gradient-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_70%_50%,rgba(255,255,255,0.3),transparent_50%)]" />
         </div>
@@ -448,24 +447,6 @@ const Index = () => {
               >
                 <Link to="/contact">Contact Us</Link>
               </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Coverage Section */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="flex items-center gap-3">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span className="text-foreground font-medium">
-                Serving Jharkhand, Uttar Pradesh & Bihar
-              </span>
-            </div>
-            <div className="h-8 w-px bg-border hidden md:block" />
-            <div className="text-muted-foreground text-sm">
-              Head Office: Ranchi, Jharkhand
             </div>
           </div>
         </div>

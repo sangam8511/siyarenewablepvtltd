@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  Sun,
   Phone,
   Mail,
   MapPin,
@@ -9,6 +8,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,15 +21,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                <Sun className="w-6 h-6 text-primary-foreground" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">Siya Renewable</h3>
-                <p className="text-xs text-secondary-foreground/70">
-                  Power the Future
-                </p>
-              </div>
+              <img 
+                src={logo} 
+                alt="Siya Renewables Pvt Ltd" 
+                className="h-16 w-auto object-contain brightness-0 invert"
+              />
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
               Leading solar EPC company in Jharkhand, Uttar Pradesh & Bihar.
@@ -144,7 +140,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-secondary-foreground/60">
-              © {currentYear} Siya Renewable. All rights reserved.
+              © {currentYear} Siya Renewables Pvt Ltd. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link
