@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,27 +40,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <Sun className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span
-                className={`font-bold text-xl ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
-                }`}
-              >
-                Siya Renewable
-              </span>
-              <span
-                className={`text-xs ${
-                  isScrolled
-                    ? "text-muted-foreground"
-                    : "text-primary-foreground/70"
-                }`}
-              >
-                Power the Future
-              </span>
-            </div>
+            <img 
+              src={logo} 
+              alt="Siya Renewables Pvt Ltd" 
+              className="h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -70,9 +55,7 @@ const Navbar = () => {
                 to={link.path}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(link.path)
-                    ? isScrolled
-                      ? "text-primary"
-                      : "text-primary"
+                    ? "text-primary"
                     : isScrolled
                     ? "text-muted-foreground hover:text-foreground"
                     : "text-primary-foreground/80 hover:text-primary-foreground"
