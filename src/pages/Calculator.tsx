@@ -25,8 +25,8 @@ const Calculator = () => {
     email: "",
     address: "",
     state: "",
+    projectType: "", // "industry" or "residence"
     monthlyBill: "",
-    roofArea: "",
     budget: "",
   });
   const [results, setResults] = useState<{
@@ -85,11 +85,18 @@ const Calculator = () => {
   };
 
   const validateStep2 = () => {
-    if (!formData.monthlyBill && !formData.roofArea) {
+    if (!formData.projectType) {
+      toast({
+        title: "Please select project type",
+        description: "Select whether this is for Industry or Residence.",
+        variant: "destructive",
+      });
+      return false;
+    }
+    if (formData.projectType === "industry" && !formData.monthlyBill) {
       toast({
         title: "Please provide project details",
-        description:
-          "Enter either your monthly electricity bill or available roof area.",
+        description: "Enter your monthly electricity bill.",
         variant: "destructive",
       });
       return false;
@@ -113,18 +120,20 @@ const Calculator = () => {
     // Simulate API call
     setTimeout(() => {
       const monthlyBill = parseFloat(formData.monthlyBill) || 0;
-      const roofArea = parseFloat(formData.roofArea) || 0;
+      const isResidence = formData.projectType === "residence";
 
       // Calculate system size based on inputs
       let systemSizeKW: number;
 
-      if (monthlyBill > 0) {
+      if (isResidence) {
+        // Fixed residential system
+        systemSizeKW = 3; // Standard 3kW residential system
+      } else if (monthlyBill > 0) {
         // Assume ₹8 per unit, 4 peak sun hours, 30 days
         const monthlyUnits = monthlyBill / 8;
         systemSizeKW = monthlyUnits / (4 * 30);
       } else {
-        // 10 sq.m per kW
-        systemSizeKW = roofArea / 10;
+        systemSizeKW = 5; // Default 5kW
       }
 
       // Round to nearest 0.5 kW
@@ -346,58 +355,82 @@ const Calculator = () => {
                 </p>
 
                 <form onSubmit={calculateQuote} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="monthlyBill">
-                        Monthly Electricity Bill (₹)
-                      </Label>
-                      <Input
-                        id="monthlyBill"
-                        name="monthlyBill"
-                        type="number"
-                        value={formData.monthlyBill}
-                        onChange={handleInputChange}
-                        placeholder="50000"
-                      />
-                      <p className="text-xs text-muted-foreground">
-                        Average monthly bill in rupees
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="roofArea">
-                        Available Roof Area (sq.m)
-                      </Label>
-                      <Input
-                        id="roofArea"
-                        name="roofArea"
-                        type="number"
-                        value={formData.roofArea}
-                        onChange={handleInputChange}
-                        placeholder="500"
-                      />
-                      <p className="text-xs text-muted-foreground">
-                        Approx. shadow-free roof area
-                      </p>
-                    </div>
-                  </div>
-
+                  {/* Project Type Selection */}
                   <div className="space-y-2">
-                    <Label htmlFor="budget">Budget Range</Label>
+                    <Label htmlFor="projectType">Project Type *</Label>
                     <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
+                      id="projectType"
+                      name="projectType"
+                      value={formData.projectType}
                       onChange={handleInputChange}
                       className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                      required
                     >
-                      <option value="">Select Budget Range</option>
-                      <option value="<10L">Less than ₹10 Lakhs</option>
-                      <option value="10-25L">₹10 - 25 Lakhs</option>
-                      <option value="25-50L">₹25 - 50 Lakhs</option>
-                      <option value="50L-1Cr">₹50 Lakhs - 1 Crore</option>
-                      <option value=">1Cr">More than ₹1 Crore</option>
+                      <option value="">Select Project Type</option>
+                      <option value="industry">Industry</option>
+                      <option value="residence">Residence</option>
                     </select>
                   </div>
+
+                  {/* Industry Fields */}
+                  {formData.projectType === "industry" && (
+                    <>
+                      <div className="space-y-2">
+                        <Label htmlFor="monthlyBill">
+                          Monthly Electricity Bill (₹) *
+                        </Label>
+                        <Input
+                          id="monthlyBill"
+                          name="monthlyBill"
+                          type="number"
+                          value={formData.monthlyBill}
+                          onChange={handleInputChange}
+                          placeholder="50000"
+                          required
+                        />
+                        <p className="text-xs text-muted-foreground">
+                          Average monthly bill in rupees
+                        </p>
+                      </div>
+
+                      <div className="space-y-2">
+                        <Label htmlFor="budget">Budget Range</Label>
+                        <select
+                          id="budget"
+                          name="budget"
+                          value={formData.budget}
+                          onChange={handleInputChange}
+                          className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+                        >
+                          <option value="">Select Budget Range</option>
+                          <option value="<10L">Less than ₹10 Lakhs</option>
+                          <option value="10-25L">₹10 - 25 Lakhs</option>
+                          <option value="25-50L">₹25 - 50 Lakhs</option>
+                          <option value="50L-1Cr">₹50 Lakhs - 1 Crore</option>
+                          <option value=">1Cr">More than ₹1 Crore</option>
+                        </select>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Residence Fields */}
+                  {formData.projectType === "residence" && (
+                    <div className="p-6 bg-primary/10 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <Sun className="w-8 h-8 text-primary" />
+                        <div>
+                          <h3 className="text-lg font-semibold text-foreground">Residential Solar Package</h3>
+                          <p className="text-sm text-muted-foreground">Complete solar solution for your home</p>
+                        </div>
+                      </div>
+                      <div className="text-3xl font-bold text-primary mb-2">
+                        ₹53,000 <span className="text-base font-normal text-muted-foreground">+ GST</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        Fixed budget package including installation, panels, inverter, and warranty.
+                      </p>
+                    </div>
+                  )}
 
                   <div className="flex gap-4">
                     <Button
