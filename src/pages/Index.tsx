@@ -1,121 +1,80 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Zap,
-  Shield,
-  Clock,
-  Users,
-  CheckCircle,
-  Star,
-  Building2,
-  Factory,
-  Sun,
-  TrendingUp,
-  Award,
-} from "lucide-react";
+import { ArrowRight, Zap, Shield, Clock, Users, CheckCircle, Star, Building2, Factory, Sun, TrendingUp, Award } from "lucide-react";
 import heroImage from "@/assets/hero-solar.jpg";
 import projectRooftop from "@/assets/project-rooftop.jpg";
 import projectGround from "@/assets/project-ground.jpg";
 import projectIndustrial from "@/assets/project-industrial.jpg";
-
 const Index = () => {
-  const services = [
-    {
-      icon: Sun,
-      title: "Solar Power Plant Design",
-      description:
-        "Complete engineering and design solutions for utility-scale and commercial solar installations.",
-    },
-    {
-      icon: Factory,
-      title: "Turnkey EPC Projects",
-      description:
-        "End-to-end EPC services from planning to commissioning with guaranteed performance.",
-    },
-    {
-      icon: Building2,
-      title: "Rooftop Solar",
-      description:
-        "Industrial and commercial rooftop solar solutions with quick ROI and maximum efficiency.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Project Consultation",
-      description:
-        "Expert techno-commercial consultation and solar financing options.",
-    },
-  ];
-
-  const stats = [
-    { value: "50+", label: "MW Installed" },
-    { value: "100+", label: "Projects Completed" },
-    { value: "15+", label: "Years Experience" },
-    { value: "98%", label: "Client Satisfaction" },
-  ];
-
-  const projects = [
-    {
-      image: projectRooftop,
-      title: "Commercial Rooftop - Ranchi",
-      capacity: "500 kW",
-      type: "Commercial",
-    },
-    {
-      image: projectGround,
-      title: "Ground Mount - Patna",
-      capacity: "2 MW",
-      type: "Industrial",
-    },
-    {
-      image: projectIndustrial,
-      title: "Industrial Complex - Lucknow",
-      capacity: "1.5 MW",
-      type: "Industrial",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Rajesh Kumar",
-      company: "Kumar Industries",
-      text: "Siya Renewables transformed our energy costs. The installation was seamless and the team was highly professional.",
-      rating: 5,
-    },
-    {
-      name: "Priya Sharma",
-      company: "Sharma Textiles",
-      text: "Outstanding service! Our 500 kW rooftop system has exceeded performance expectations.",
-      rating: 5,
-    },
-    {
-      name: "Amit Verma",
-      company: "Verma Foods",
-      text: "Best decision we made. ROI achieved in just 4 years with reliable support from the team.",
-      rating: 5,
-    },
-  ];
-
-  const advantages = [
-    "Local expertise in Jharkhand, UP & Bihar",
-    "Faster project execution",
-    "Personalized design solutions",
-    "Comprehensive after-sales support",
-    "Competitive pricing",
-    "Quality assured components",
-  ];
-
-  return (
-    <main className="overflow-hidden">
+  const services = [{
+    icon: Sun,
+    title: "Solar Power Plant Design",
+    description: "Complete engineering and design solutions for utility-scale and commercial solar installations."
+  }, {
+    icon: Factory,
+    title: "Turnkey EPC Projects",
+    description: "End-to-end EPC services from planning to commissioning with guaranteed performance."
+  }, {
+    icon: Building2,
+    title: "Rooftop Solar",
+    description: "Industrial and commercial rooftop solar solutions with quick ROI and maximum efficiency."
+  }, {
+    icon: TrendingUp,
+    title: "Project Consultation",
+    description: "Expert techno-commercial consultation and solar financing options."
+  }];
+  const stats = [{
+    value: "50+",
+    label: "MW Installed"
+  }, {
+    value: "100+",
+    label: "Projects Completed"
+  }, {
+    value: "15+",
+    label: "Years Experience"
+  }, {
+    value: "98%",
+    label: "Client Satisfaction"
+  }];
+  const projects = [{
+    image: projectRooftop,
+    title: "Commercial Rooftop - Ranchi",
+    capacity: "500 kW",
+    type: "Commercial"
+  }, {
+    image: projectGround,
+    title: "Ground Mount - Patna",
+    capacity: "2 MW",
+    type: "Industrial"
+  }, {
+    image: projectIndustrial,
+    title: "Industrial Complex - Lucknow",
+    capacity: "1.5 MW",
+    type: "Industrial"
+  }];
+  const testimonials = [{
+    name: "Rajesh Kumar",
+    company: "Kumar Industries",
+    text: "Siya Renewables transformed our energy costs. The installation was seamless and the team was highly professional.",
+    rating: 5
+  }, {
+    name: "Priya Sharma",
+    company: "Sharma Textiles",
+    text: "Outstanding service! Our 500 kW rooftop system has exceeded performance expectations.",
+    rating: 5
+  }, {
+    name: "Amit Verma",
+    company: "Verma Foods",
+    text: "Best decision we made. ROI achieved in just 4 years with reliable support from the team.",
+    rating: 5
+  }];
+  const advantages = ["Local expertise in Jharkhand, UP & Bihar", "Faster project execution", "Personalized design solutions", "Comprehensive after-sales support", "Competitive pricing", "Quality assured components"];
+  return <main className="overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Solar power plant at sunrise"
-            className="w-full h-full object-cover"
-          />
+          <img src={heroImage} alt="Solar power plant at sunrise" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
         </div>
 
@@ -129,12 +88,12 @@ const Index = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up animation-delay-100">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in-up animation-delay-100 text-white">
               Power Your Future with{" "}
               <span className="text-gradient-primary">Clean Solar Energy</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 leading-relaxed animate-fade-in-up animation-delay-200">
+            <p className="text-lg md:text-xl mb-8 leading-relaxed animate-fade-in-up animation-delay-200 text-destructive-foreground">
               Siya Renewables delivers turnkey solar power solutions across
               Jharkhand, Uttar Pradesh & Bihar. From design to commissioning, we
               power industries with sustainable energy.
@@ -185,20 +144,16 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-4 lg:px-8 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+            {stats.map((stat, index) => <div key={index} className="text-center animate-fade-in-up" style={{
+            animationDelay: `${index * 100}ms`
+          }}>
                 <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-primary-foreground/80">
                   {stat.label}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -220,11 +175,7 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-card p-8 rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border border-border/50"
-              >
+            {services.map((service, index) => <div key={index} className="group bg-card p-8 rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border border-border/50">
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
                   <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
@@ -234,8 +185,7 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {service.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center mt-12">
@@ -268,12 +218,10 @@ const Index = () => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {advantages.map((advantage, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                {advantages.map((advantage, index) => <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent shrink-0" />
                     <span className="text-sm text-foreground">{advantage}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
               <Button asChild size="lg">
@@ -286,11 +234,7 @@ const Index = () => {
 
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/5 rounded-3xl -rotate-3" />
-              <img
-                src={projectIndustrial}
-                alt="Solar installation team at work"
-                className="relative rounded-2xl shadow-strong w-full"
-              />
+              <img src={projectIndustrial} alt="Solar installation team at work" className="relative rounded-2xl shadow-strong w-full" />
               <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-strong border border-border/50">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
@@ -328,30 +272,21 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300"
-              >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+            {projects.map((project, index) => <div key={index} className="group relative overflow-hidden rounded-2xl shadow-soft hover:shadow-strong transition-all duration-300">
+                <img src={project.image} alt={project.title} className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <span className="inline-block px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full mb-3">
                     {project.type}
                   </span>
-                  <h3 className="text-xl font-semibold text-primary-foreground mb-1">
+                  <h3 className="text-xl font-semibold mb-1 text-destructive-foreground">
                     {project.title}
                   </h3>
-                  <p className="text-primary-foreground/80 text-sm">
+                  <p className="text-sm text-destructive-foreground">
                     Capacity: {project.capacity}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center mt-12">
@@ -382,18 +317,11 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all border border-border/30"
-              >
+            {testimonials.map((testimonial, index) => <div key={index} className="bg-card p-8 rounded-2xl shadow-soft hover:shadow-medium transition-all border border-border/30">
                 <div className="flex gap-1 mb-4">
-                  {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 fill-primary text-primary"
-                    />
-                  ))}
+                  {Array.from({
+                length: testimonial.rating
+              }).map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 <p className="text-card-foreground mb-6 leading-relaxed">
                   "{testimonial.text}"
@@ -406,8 +334,7 @@ const Index = () => {
                     {testimonial.company}
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -428,31 +355,19 @@ const Index = () => {
               and budget.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                variant="secondary"
-                size="xl"
-                className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-              >
+              <Button asChild variant="secondary" size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
                 <Link to="/calculator" className="gap-2">
                   Get Free Quote
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="hero-outline"
-                size="xl"
-                className="border-primary-foreground/30 text-primary-foreground"
-              >
+              <Button asChild variant="hero-outline" size="xl" className="border-primary-foreground/30 text-primary-foreground">
                 <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
