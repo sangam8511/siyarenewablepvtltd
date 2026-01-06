@@ -24,7 +24,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Siya Renewables Pvt Ltd" 
-                className="h-16 w-auto object-contain brightness-0 invert"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
@@ -62,7 +62,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-semibold text-lg mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-3">
               {["Home", "About Us", "Services", "Projects", "Contact"].map(
                 (link) => (
@@ -81,7 +81,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Our Services</h4>
+            <h4 className="font-semibold text-lg mb-6 text-primary">Our Services</h4>
             <ul className="space-y-3">
               {[
                 "Solar Power Plants",
@@ -104,7 +104,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Contact Us</h4>
+            <h4 className="font-semibold text-lg mb-6 text-primary">Contact Us</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />

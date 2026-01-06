@@ -6,63 +6,63 @@
 
 @layer base {
   :root {
-    /* Siya Renewables Blue Theme */
-    --background: 210 30% 98%;
-    --foreground: 215 70% 15%;
+    /* Siya Renewables Gold & Dark Theme */
+    --background: 40 20% 98%;
+    --foreground: 35 40% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 70% 15%;
+    --card-foreground: 35 40% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 70% 15%;
+    --popover-foreground: 35 40% 10%;
 
-    /* Primary Blue - From Logo */
-    --primary: 210 85% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary Gold - From Logo */
+    --primary: 43 75% 50%;
+    --primary-foreground: 35 40% 10%;
 
-    /* Deep Navy - Secondary */
-    --secondary: 215 70% 15%;
-    --secondary-foreground: 0 0% 100%;
+    /* Deep Charcoal - Secondary */
+    --secondary: 30 15% 12%;
+    --secondary-foreground: 43 75% 55%;
 
-    --muted: 210 25% 95%;
-    --muted-foreground: 215 20% 45%;
+    --muted: 40 20% 95%;
+    --muted-foreground: 35 20% 45%;
 
-    /* Accent - Light Blue */
-    --accent: 200 80% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Bright Gold */
+    --accent: 45 90% 55%;
+    --accent-foreground: 35 40% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 30% 88%;
-    --input: 210 30% 88%;
-    --ring: 210 85% 45%;
+    --border: 40 25% 88%;
+    --input: 40 25% 88%;
+    --ring: 43 75% 50%;
 
     --radius: 0.75rem;
 
-    /* Custom Siya Colors - Blue Gradient Theme */
-    --siya-blue: 210 85% 45%;
-    --siya-blue-light: 200 85% 55%;
-    --siya-blue-dark: 215 80% 35%;
-    --siya-navy: 215 70% 15%;
-    --siya-navy-light: 215 50% 25%;
-    --siya-sky: 195 90% 60%;
-    --siya-cyan: 185 80% 50%;
-    --siya-green: 160 70% 45%;
-    --siya-green-light: 160 70% 55%;
+    /* Custom Siya Colors - Gold Gradient Theme */
+    --siya-gold: 43 75% 50%;
+    --siya-gold-light: 45 80% 60%;
+    --siya-gold-dark: 40 70% 40%;
+    --siya-charcoal: 30 15% 12%;
+    --siya-charcoal-light: 30 10% 20%;
+    --siya-amber: 38 90% 55%;
+    --siya-bronze: 35 60% 45%;
+    --siya-cream: 45 40% 95%;
+    --siya-warm: 35 30% 85%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 45%) 0%, hsl(195 90% 55%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(215 70% 15%) 0%, hsl(215 50% 25%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
-    --gradient-blue: linear-gradient(135deg, hsl(215 80% 35%) 0%, hsl(200 85% 55%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(43 75% 50%) 0%, hsl(45 90% 60%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(30 15% 12%) 0%, hsl(30 10% 18%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(45 40% 98%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(40 70% 40%) 0%, hsl(45 90% 60%) 100%);
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(215 70% 15% / 0.08);
-    --shadow-medium: 0 8px 30px -4px hsl(215 70% 15% / 0.12);
-    --shadow-strong: 0 12px 40px -6px hsl(215 70% 15% / 0.18);
-    --shadow-glow: 0 0 40px hsl(210 85% 45% / 0.25);
-    --shadow-blue: 0 8px 30px -4px hsl(210 85% 45% / 0.3);
+    --shadow-soft: 0 4px 20px -2px hsl(35 40% 10% / 0.08);
+    --shadow-medium: 0 8px 30px -4px hsl(35 40% 10% / 0.12);
+    --shadow-strong: 0 12px 40px -6px hsl(35 40% 10% / 0.18);
+    --shadow-glow: 0 0 40px hsl(43 75% 50% / 0.25);
+    --shadow-gold: 0 8px 30px -4px hsl(43 75% 50% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -71,37 +71,37 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 43 75% 50%;
   }
 
   .dark {
-    --background: 215 70% 10%;
-    --foreground: 210 40% 98%;
+    --background: 30 15% 8%;
+    --foreground: 45 40% 95%;
 
-    --card: 215 60% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 12% 12%;
+    --card-foreground: 45 40% 95%;
 
-    --popover: 215 60% 14%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 12% 12%;
+    --popover-foreground: 45 40% 95%;
 
-    --primary: 200 85% 55%;
-    --primary-foreground: 215 70% 10%;
+    --primary: 45 85% 55%;
+    --primary-foreground: 30 15% 8%;
 
-    --secondary: 200 85% 55%;
-    --secondary-foreground: 215 70% 10%;
+    --secondary: 45 85% 55%;
+    --secondary-foreground: 30 15% 8%;
 
-    --muted: 215 50% 20%;
-    --muted-foreground: 210 25% 65%;
+    --muted: 30 10% 18%;
+    --muted-foreground: 40 20% 65%;
 
-    --accent: 195 80% 60%;
+    --accent: 43 90% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 45 40% 95%;
 
-    --border: 215 50% 20%;
-    --input: 215 50% 20%;
-    --ring: 200 85% 55%;
+    --border: 30 10% 20%;
+    --input: 30 10% 20%;
+    --ring: 45 85% 55%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -110,7 +110,7 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 43 75% 50%;
   }
 }
 
@@ -135,9 +135,9 @@
     background-image: var(--gradient-primary);
   }
 
-  .text-gradient-blue {
+  .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-blue);
+    background-image: var(--gradient-gold);
   }
 
   .bg-gradient-primary {
@@ -148,8 +148,8 @@
     background-image: var(--gradient-hero);
   }
 
-  .bg-gradient-blue {
-    background-image: var(--gradient-blue);
+  .bg-gradient-gold {
+    background-image: var(--gradient-gold);
   }
 
   .shadow-soft {
@@ -168,8 +168,8 @@
     box-shadow: var(--shadow-glow);
   }
 
-  .shadow-blue {
-    box-shadow: var(--shadow-blue);
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
   }
 }
 
@@ -274,9 +274,9 @@
 
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 20px hsl(210 85% 45% / 0.3);
+    box-shadow: 0 0 20px hsl(43 75% 50% / 0.3);
   }
   50% {
-    box-shadow: 0 0 40px hsl(210 85% 45% / 0.5);
+    box-shadow: 0 0 40px hsl(43 75% 50% / 0.5);
   }
 }

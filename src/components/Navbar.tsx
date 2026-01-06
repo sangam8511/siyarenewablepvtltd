@@ -58,7 +58,7 @@ const Navbar = () => {
                     ? "text-primary"
                     : isScrolled
                     ? "text-muted-foreground hover:text-foreground"
-                    : "text-primary-foreground/80 hover:text-primary-foreground"
+                    : "text-siya-gold-light hover:text-primary"
                 }`}
               >
                 {link.name}
@@ -81,13 +81,13 @@ const Navbar = () => {
             {isMobileMenuOpen ? (
               <X
                 className={`w-6 h-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                  isScrolled ? "text-foreground" : "text-primary"
                 }`}
               />
             ) : (
               <Menu
                 className={`w-6 h-6 ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                  isScrolled ? "text-foreground" : "text-primary"
                 }`}
               />
             )}
@@ -96,7 +96,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-card rounded-lg shadow-strong mt-2 p-4 animate-fade-in">
+          <div className="lg:hidden bg-card rounded-lg shadow-strong mt-2 p-4 animate-fade-in border border-border">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
