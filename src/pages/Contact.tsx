@@ -75,7 +75,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 98765 43210", "+91 87654 32109"],
+      details: ["+91 76218 24599"],
     },
     {
       icon: Mail,
@@ -273,9 +273,9 @@ const Contact = () => {
                   size="lg"
                   className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                 >
-                  <a href="tel:+919876543210" className="gap-2">
+                  <a href="tel:+917621824599" className="gap-2">
                     <Phone className="w-4 h-4" />
-                    +91 98765 43210
+                    +91 76218 24599
                   </a>
                 </Button>
               </div>

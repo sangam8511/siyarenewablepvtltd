@@ -280,3 +280,16 @@
     box-shadow: 0 0 40px hsl(43 75% 50% / 0.5);
   }
 }
+
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}

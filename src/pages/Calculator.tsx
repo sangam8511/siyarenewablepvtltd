@@ -610,7 +610,7 @@ const Calculator = () => {
                       Download PDF Quote
                     </Button>
                     <Button asChild size="lg" className="flex-1 gap-2">
-                      <a href="tel:+919876543210">
+                      <a href="tel:+917621824599">
                         <Phone className="w-4 h-4" />
                         Call Us Now
                       </a>
@@ -640,9 +640,9 @@ const Calculator = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="default" size="lg">
-              <a href="tel:+919876543210" className="gap-2">
+              <a href="tel:+917621824599" className="gap-2">
                 <Phone className="w-4 h-4" />
-                +91 98765 43210
+                +91 76218 24599
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
