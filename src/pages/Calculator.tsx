@@ -27,7 +27,6 @@ const Calculator = () => {
     state: "",
     projectType: "", // "industry" or "residence"
     monthlyBill: "",
-    budget: "",
   });
   const [results, setResults] = useState<{
     systemSize: number;
@@ -374,43 +373,23 @@ const Calculator = () => {
 
                   {/* Industry Fields */}
                   {formData.projectType === "industry" && (
-                    <>
-                      <div className="space-y-2">
-                        <Label htmlFor="monthlyBill">
-                          Monthly Electricity Bill (₹) *
-                        </Label>
-                        <Input
-                          id="monthlyBill"
-                          name="monthlyBill"
-                          type="number"
-                          value={formData.monthlyBill}
-                          onChange={handleInputChange}
-                          placeholder="50000"
-                          required
-                        />
-                        <p className="text-xs text-muted-foreground">
-                          Average monthly bill in rupees
-                        </p>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="budget">Budget Range</Label>
-                        <select
-                          id="budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleInputChange}
-                          className="w-full h-11 px-4 rounded-lg border border-input bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                        >
-                          <option value="">Select Budget Range</option>
-                          <option value="<10L">Less than ₹10 Lakhs</option>
-                          <option value="10-25L">₹10 - 25 Lakhs</option>
-                          <option value="25-50L">₹25 - 50 Lakhs</option>
-                          <option value="50L-1Cr">₹50 Lakhs - 1 Crore</option>
-                          <option value=">1Cr">More than ₹1 Crore</option>
-                        </select>
-                      </div>
-                    </>
+                    <div className="space-y-2">
+                      <Label htmlFor="monthlyBill">
+                        Monthly Electricity Bill (₹) *
+                      </Label>
+                      <Input
+                        id="monthlyBill"
+                        name="monthlyBill"
+                        type="number"
+                        value={formData.monthlyBill}
+                        onChange={handleInputChange}
+                        placeholder="50000"
+                        required
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Average monthly bill in rupees
+                      </p>
+                    </div>
                   )}
 
                   {/* Residence Fields */}
