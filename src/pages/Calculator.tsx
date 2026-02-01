@@ -142,9 +142,11 @@ const Calculator = () => {
       // Annual generation (1500 kWh per kW in Eastern India)
       const annualGeneration = systemSizeKW * 1500;
 
-      // Cost estimation (₹45,000 - ₹55,000 per kW for commercial)
-      const estimatedCostMin = systemSizeKW * 45000;
-      const estimatedCostMax = systemSizeKW * 55000;
+      // Cost estimation based on project type
+      // Industry: ₹35,000 per kW | Residence: ₹55,000 per kW
+      const costPerKW = isResidence ? 55000 : 35000;
+      const estimatedCostMin = systemSizeKW * costPerKW;
+      const estimatedCostMax = systemSizeKW * costPerKW;
 
       // Annual savings (₹8 per unit)
       const annualSavings = annualGeneration * 8;
