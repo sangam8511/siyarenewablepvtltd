@@ -28,7 +28,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
-              Leading solar EPC company in Jharkhand, Uttar Pradesh & Bihar.
+              Leading solar EPC company in Gujarat, Jharkhand & Bihar.
               Delivering turnkey solar solutions for commercial and industrial
               sectors.
             </p>
@@ -108,17 +108,19 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-secondary-foreground/80">
-                  Ranchi, Jharkhand, India
-                </span>
+                <div className="text-sm text-secondary-foreground/80">
+                  <strong>Head Office:</strong> Surat, Gujarat<br />
+                  <strong>Branch:</strong> Sahibganj, Jharkhand<br />
+                  <strong>Branch:</strong> Ranchi, Jharkhand
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <a
-                  href="tel:+917621824599"
+                  href="tel:+919016182128"
                   className="text-sm text-secondary-foreground/80 hover:text-primary transition-colors"
                 >
-                  +91 76218 24599
+                  +91 90161 82128
                 </a>
               </li>
               <li className="flex items-center gap-3">

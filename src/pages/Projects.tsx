@@ -2,10 +2,15 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Zap, Calendar, Eye } from "lucide-react";
-import projectRooftop from "@/assets/project-rooftop.jpg";
-import projectGround from "@/assets/project-ground.jpg";
-import projectIndustrial from "@/assets/project-industrial.jpg";
-import heroSolar from "@/assets/hero-solar.jpg";
+import projectCommercialRooftop from "@/assets/project-commercial-rooftop.jpg";
+import projectGroundMount from "@/assets/project-ground-mount.jpg";
+import projectIndustrialPlant from "@/assets/project-industrial-plant.jpg";
+import projectTextileFactory from "@/assets/project-textile-factory.jpg";
+import projectShoppingMall from "@/assets/project-shopping-mall.jpg";
+import projectSolarFarm from "@/assets/project-solar-farm.jpg";
+import projectSteelPlant from "@/assets/project-steel-plant.jpg";
+import projectItPark from "@/assets/project-it-park.jpg";
+import projectAgriProcessing from "@/assets/project-agri-processing.jpg";
 
 const Projects = () => {
   const [filter, setFilter] = useState("All");
@@ -15,12 +20,12 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Commercial Rooftop - Ranchi",
-      location: "Ranchi, Jharkhand",
+      title: "Commercial Rooftop - Surat",
+      location: "Surat, Gujarat",
       capacity: "500 kW",
       type: "Commercial",
       year: "2024",
-      image: projectRooftop,
+      image: projectCommercialRooftop,
       description:
         "Rooftop solar installation for a commercial complex, reducing electricity costs by 80%.",
     },
@@ -31,40 +36,40 @@ const Projects = () => {
       capacity: "2 MW",
       type: "Utility",
       year: "2023",
-      image: projectGround,
+      image: projectGroundMount,
       description:
         "Large-scale ground-mounted solar power plant serving the local grid.",
     },
     {
       id: 3,
-      title: "Industrial Complex - Lucknow",
-      location: "Lucknow, UP",
+      title: "Industrial Complex - Sahibganj",
+      location: "Sahibganj, Jharkhand",
       capacity: "1.5 MW",
       type: "Industrial",
       year: "2023",
-      image: projectIndustrial,
+      image: projectIndustrialPlant,
       description:
         "Complete solar solution for a manufacturing facility with 24/7 operations.",
     },
     {
       id: 4,
-      title: "Textile Factory - Varanasi",
-      location: "Varanasi, UP",
+      title: "Textile Factory - Ahmedabad",
+      location: "Ahmedabad, Gujarat",
       capacity: "800 kW",
       type: "Industrial",
       year: "2023",
-      image: heroSolar,
+      image: projectTextileFactory,
       description:
         "Solar power plant for a major textile manufacturer, achieving energy independence.",
     },
     {
       id: 5,
-      title: "Shopping Mall - Dhanbad",
-      location: "Dhanbad, Jharkhand",
+      title: "Shopping Mall - Ranchi",
+      location: "Ranchi, Jharkhand",
       capacity: "350 kW",
       type: "Commercial",
       year: "2022",
-      image: projectRooftop,
+      image: projectShoppingMall,
       description:
         "Rooftop solar installation powering one of the largest malls in the region.",
     },
@@ -75,7 +80,7 @@ const Projects = () => {
       capacity: "5 MW",
       type: "Utility",
       year: "2022",
-      image: projectGround,
+      image: projectSolarFarm,
       description:
         "Utility-scale solar farm contributing clean energy to the state grid.",
     },
@@ -86,29 +91,29 @@ const Projects = () => {
       capacity: "3 MW",
       type: "Industrial",
       year: "2022",
-      image: projectIndustrial,
+      image: projectSteelPlant,
       description:
         "Hybrid solar solution for a steel manufacturing plant with high energy demands.",
     },
     {
       id: 8,
-      title: "IT Park - Noida",
-      location: "Noida, UP",
+      title: "IT Park - Gandhinagar",
+      location: "Gandhinagar, Gujarat",
       capacity: "1.2 MW",
       type: "Commercial",
       year: "2021",
-      image: projectRooftop,
+      image: projectItPark,
       description:
         "Multi-building solar installation for a major IT park campus.",
     },
     {
       id: 9,
-      title: "Agricultural Processing - Gorakhpur",
-      location: "Gorakhpur, UP",
+      title: "Agricultural Processing - Darbhanga",
+      location: "Darbhanga, Bihar",
       capacity: "600 kW",
       type: "Industrial",
       year: "2021",
-      image: heroSolar,
+      image: projectAgriProcessing,
       description:
         "Solar power for food processing and cold storage facilities.",
     },
@@ -140,7 +145,7 @@ const Projects = () => {
             </h1>
             <p className="text-lg text-secondary-foreground/80">
               Explore our portfolio of successful solar installations across
-              Jharkhand, Uttar Pradesh, and Bihar. Each project represents our
+              Gujarat, Jharkhand, and Bihar. Each project represents our
               commitment to quality and performance.
             </p>
           </div>

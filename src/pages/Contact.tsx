@@ -69,13 +69,18 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Our Office",
-      details: ["Ranchi, Jharkhand, India", "PIN: 834001"],
+      title: "Head Office",
+      details: ["Surat, Gujarat, India"],
+    },
+    {
+      icon: MapPin,
+      title: "Branch Offices",
+      details: ["Sahibganj, Jharkhand", "Ranchi, Jharkhand"],
     },
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 76218 24599"],
+      details: ["+91 90161 82128"],
     },
     {
       icon: Mail,
@@ -273,9 +278,9 @@ const Contact = () => {
                   size="lg"
                   className="w-full bg-primary-foreground text-primary hover:bg-primary-foreground/90"
                 >
-                  <a href="tel:+917621824599" className="gap-2">
+                  <a href="tel:+919016182128" className="gap-2">
                     <Phone className="w-4 h-4" />
-                    +91 76218 24599
+                    +91 90161 82128
                   </a>
                 </Button>
               </div>
@@ -297,14 +302,14 @@ const Contact = () => {
           </div>
           <div className="bg-card rounded-2xl overflow-hidden shadow-medium h-96">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117223.69938736042!2d85.25000421589456!3d23.34477009241945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e104aa5db7dd%3A0xdc09d49d6899f43e!2sRanchi%2C%20Jharkhand!5e0!3m2!1sen!2sin!4v1703659899999!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238132.82047027826!2d72.69396225!3d21.195099749999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1703659899999!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Siya Renewable Office Location"
+              title="Siya Renewable Head Office - Surat"
             />
           </div>
         </div>
@@ -324,7 +329,7 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {["Jharkhand", "Uttar Pradesh", "Bihar"].map((state) => (
+            {["Gujarat", "Jharkhand", "Bihar"].map((state) => (
               <div
                 key={state}
                 className="bg-card p-6 rounded-xl shadow-soft text-center"

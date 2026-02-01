@@ -553,8 +553,7 @@ const Calculator = () => {
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-accent" />
-                        Solar Panels ({Math.ceil(results.systemSize / 0.54)}{" "}
-                        nos. @ 540W each)
+                        Solar Panels (193 nos. @ 560W to 620W each)
                       </li>
                       <li className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-accent" />
@@ -591,7 +590,7 @@ const Calculator = () => {
                       Download PDF Quote
                     </Button>
                     <Button asChild size="lg" className="flex-1 gap-2">
-                      <a href="tel:+917621824599">
+                      <a href="tel:+919016182128">
                         <Phone className="w-4 h-4" />
                         Call Us Now
                       </a>
@@ -621,9 +620,9 @@ const Calculator = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="default" size="lg">
-              <a href="tel:+917621824599" className="gap-2">
+              <a href="tel:+919016182128" className="gap-2">
                 <Phone className="w-4 h-4" />
-                +91 76218 24599
+                +91 90161 82128
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
