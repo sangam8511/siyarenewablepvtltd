@@ -1,56 +1,47 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Target,
-  Eye,
-  Heart,
-  Award,
-  Users,
-  CheckCircle,
-  Lightbulb,
-  Handshake,
-} from "lucide-react";
+import { ArrowRight, Target, Eye, Heart, Award, Users, CheckCircle, Lightbulb, Handshake } from "lucide-react";
 import projectIndustrial from "@/assets/project-industrial.jpg";
-
 const About = () => {
-  const values = [
-    {
-      icon: Lightbulb,
-      title: "Innovation",
-      description:
-        "Embracing cutting-edge solar technology to deliver maximum efficiency and ROI.",
-    },
-    {
-      icon: Handshake,
-      title: "Trust",
-      description:
-        "Building long-term relationships through transparency and reliable service.",
-    },
-    {
-      icon: Heart,
-      title: "Sustainability",
-      description:
-        "Committed to creating a cleaner, greener future for generations to come.",
-    },
-    {
-      icon: Award,
-      title: "Excellence",
-      description:
-        "Striving for the highest quality in every project, big or small.",
-    },
-  ];
-
-  const milestones = [
-    { year: "2008", title: "Company Founded", description: "Siya Renewable established in Ranchi, Jharkhand" },
-    { year: "2012", title: "First MW Installation", description: "Completed first megawatt-scale solar project" },
-    { year: "2016", title: "Regional Expansion", description: "Expanded operations to UP and Bihar" },
-    { year: "2020", title: "50 MW Milestone", description: "Crossed 50 MW of total installed capacity" },
-    { year: "2024", title: "100+ Projects", description: "Successfully completed over 100 solar installations" },
-  ];
-
-  return (
-    <main className="pt-20">
+  const values = [{
+    icon: Lightbulb,
+    title: "Innovation",
+    description: "Embracing cutting-edge solar technology to deliver maximum efficiency and ROI."
+  }, {
+    icon: Handshake,
+    title: "Trust",
+    description: "Building long-term relationships through transparency and reliable service."
+  }, {
+    icon: Heart,
+    title: "Sustainability",
+    description: "Committed to creating a cleaner, greener future for generations to come."
+  }, {
+    icon: Award,
+    title: "Excellence",
+    description: "Striving for the highest quality in every project, big or small."
+  }];
+  const milestones = [{
+    year: "2008",
+    title: "Company Founded",
+    description: "Siya Renewable established in Ranchi, Jharkhand"
+  }, {
+    year: "2012",
+    title: "First MW Installation",
+    description: "Completed first megawatt-scale solar project"
+  }, {
+    year: "2016",
+    title: "Regional Expansion",
+    description: "Expanded operations to UP and Bihar"
+  }, {
+    year: "2020",
+    title: "50 MW Milestone",
+    description: "Crossed 50 MW of total installed capacity"
+  }, {
+    year: "2024",
+    title: "100+ Projects",
+    description: "Successfully completed over 100 solar installations"
+  }];
+  return <main className="pt-20">
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="container mx-auto px-4 lg:px-8">
@@ -77,11 +68,7 @@ const About = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-3xl rotate-3" />
-              <img
-                src={projectIndustrial}
-                alt="Siya Renewable team at work"
-                className="relative rounded-2xl shadow-strong w-full"
-              />
+              <img src={projectIndustrial} alt="Siya Renewable team at work" className="relative rounded-2xl shadow-strong w-full" />
             </div>
           </div>
         </div>
@@ -110,13 +97,7 @@ const About = () => {
                     Ravi Pandey, Founder & MD
                   </h3>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
-                    <p>
-                      Ravi Pandey started Siya Renewable in 2008 with a simple
-                      belief: Eastern India deserves access to reliable,
-                      affordable solar energy. Growing up in Jharkhand, he
-                      witnessed firsthand the power challenges faced by local
-                      industries and communities.
-                    </p>
+                    <p>Ravi Pandey started Siya Renewable in 2022 with a simple belief: Eastern India deserves access to reliable, affordable solar energy. Growing up in Jharkhand, he witnessed firsthand the power challenges faced by local industries and communities.</p>
                     <p>
                       With over 15 years of experience in the renewable energy
                       sector, Ravi has led the company from a small consultancy
@@ -194,11 +175,7 @@ const About = () => {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-background rounded-xl"
-              >
+            {values.map((value, index) => <div key={index} className="text-center p-6 bg-background rounded-xl">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-7 h-7 text-primary" />
                 </div>
@@ -208,8 +185,7 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">
                   {value.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -227,15 +203,12 @@ const About = () => {
           </div>
 
           <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="flex gap-6 mb-8 last:mb-0">
+            {milestones.map((milestone, index) => <div key={index} className="flex gap-6 mb-8 last:mb-0">
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
                     {milestone.year}
                   </div>
-                  {index < milestones.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-primary/20 mt-2" />
-                  )}
+                  {index < milestones.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 mt-2" />}
                 </div>
                 <div className="flex-1 pb-8">
                   <h4 className="font-semibold text-foreground mb-1">
@@ -245,8 +218,7 @@ const About = () => {
                     {milestone.description}
                   </p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -265,22 +237,10 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "Deep local expertise in Jharkhand, UP & Bihar",
-              "Faster project execution than national players",
-              "Personalized design solutions for every project",
-              "Direct access to senior leadership",
-              "Comprehensive after-sales support",
-              "Competitive pricing without quality compromise",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 bg-card p-6 rounded-xl"
-              >
+            {["Deep local expertise in Jharkhand, UP & Bihar", "Faster project execution than national players", "Personalized design solutions for every project", "Direct access to senior leadership", "Comprehensive after-sales support", "Competitive pricing without quality compromise"].map((item, index) => <div key={index} className="flex items-start gap-4 bg-card p-6 rounded-xl">
                 <CheckCircle className="w-6 h-6 text-accent shrink-0 mt-0.5" />
                 <span className="text-card-foreground">{item}</span>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -295,12 +255,7 @@ const About = () => {
             Let's discuss how we can help you transition to clean, affordable
             solar energy.
           </p>
-          <Button
-            asChild
-            variant="secondary"
-            size="xl"
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/90"
-          >
+          <Button asChild variant="secondary" size="xl" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
             <Link to="/contact" className="gap-2">
               Contact Us Today
               <ArrowRight className="w-5 h-5" />
@@ -308,8 +263,6 @@ const About = () => {
           </Button>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default About;
