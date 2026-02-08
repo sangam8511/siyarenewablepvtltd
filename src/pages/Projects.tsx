@@ -33,15 +33,6 @@ const Projects = () => {
     image: projectGroundMount,
     description: "Large-scale ground-mounted solar power plant serving the local grid."
   }, {
-    id: 3,
-    title: "Industrial Complex - Sahibganj",
-    location: "Sahibganj, Jharkhand",
-    capacity: "1.5 MW",
-    type: "Industrial",
-    year: "2023",
-    image: projectIndustrialPlant,
-    description: "Complete solar solution for a manufacturing facility with 24/7 operations."
-  }, {
     id: 4,
     title: "Textile Factory - Ahmedabad",
     location: "Ahmedabad, Gujarat",
@@ -77,15 +68,6 @@ const Projects = () => {
     year: "2022",
     image: projectSteelPlant,
     description: "Hybrid solar solution for a steel manufacturing plant with high energy demands."
-  }, {
-    id: 8,
-    title: "IT Park - Gandhinagar",
-    location: "Gandhinagar, Gujarat",
-    capacity: "1.2 MW",
-    type: "Commercial",
-    year: "2021",
-    image: projectItPark,
-    description: "Multi-building solar installation for a major IT park campus."
   }, {
     id: 9,
     title: "Agricultural Processing - Darbhanga",
