@@ -191,37 +191,7 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Our Journey
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Key Milestones
-            </h2>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            {milestones.map((milestone, index) => <div key={index} className="flex gap-6 mb-8 last:mb-0">
-                <div className="flex flex-col items-center">
-                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
-                    {milestone.year}
-                  </div>
-                  {index < milestones.length - 1 && <div className="w-0.5 flex-1 bg-primary/20 mt-2" />}
-                </div>
-                <div className="flex-1 pb-8">
-                  <h4 className="font-semibold text-foreground mb-1">
-                    {milestone.title}
-                  </h4>
-                  <p className="text-muted-foreground text-sm">
-                    {milestone.description}
-                  </p>
-                </div>
-              </div>)}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Why Choose Us */}
       <section className="py-20 lg:py-28 bg-secondary">
