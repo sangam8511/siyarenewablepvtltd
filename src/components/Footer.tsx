@@ -24,7 +24,7 @@ const Footer = () => {
               <img 
                 src={logo} 
                 alt="Siya Renewables Pvt Ltd" 
-                className="h-16 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </div>
             <p className="text-sm text-secondary-foreground/80 leading-relaxed">
