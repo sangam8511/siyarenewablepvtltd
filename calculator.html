@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Solar Cost Calculator - Get instant quote for your solar project with our free online calculator."
+    />
+    <title>Calculator - Siya Renewable</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .step {
+        display: none;
+      }
+      .step[data-step="1"] {
+        display: block;
+      }
+      .result-item {
+        background: var(--card);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        text-align: center;
+        border: 1px solid var(--border);
+      }
+      .result-label {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+      }
+      .result-value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo-container">
+          <img
+            src="images/logo.png"
+            alt="Siya Renewable Pvt Ltd"
+            class="logo"
+          />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="calculator.html" class="active">Calculator</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-secondary"
+      style="padding-top: 160px; padding-bottom: 80px"
+    >
+      <div class="container">
+        <div
+          style="
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+          "
+        >
+          <div
+            class="section-tag"
+            style="background: rgba(249, 115, 22, 0.2); color: var(--primary)"
+          >
+            Calculator
+          </div>
+          <h1 style="color: white; margin-bottom: 1.5rem">
+            Get Your Free Solar <span class="text-gradient">Quote</span>
+          </h1>
+          <p style="color: rgba(255, 255, 255, 0.8); font-size: 1.125rem">
+            Answer a few simple questions and get an instant quote for your
+            solar project. No obligations, completely free.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="bg-background">
+      <div class="container">
+        <div style="max-width: 600px; margin: 0 auto">
+          <div class="card">
+            <form class="calculator-form">
+              <!-- Step 1: Contact Information -->
+              <div class="step" data-step="1">
+                <h2 style="margin-bottom: 1.5rem">Your Contact Information</h2>
+
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="9012345678"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Company Name</label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    placeholder="Your Company"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="address">Address *</label>
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    placeholder="Your Address"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="state">State *</label>
+                  <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option value="jharkhand">Jharkhand</option>
+                    <option value="upPradesh">Uttar Pradesh</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <button
+                  type="button"
+                  class="next-btn btn btn-primary btn-lg"
+                  style="width: 100%"
+                >
+                  Next Step
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Step 2: Project Details -->
+              <div class="step" data-step="2">
+                <h2 style="margin-bottom: 1.5rem">Project Details</h2>
+
+                <div class="form-group">
+                  <label for="projectType">Project Type *</label>
+                  <select id="projectType" name="projectType" required>
+                    <option value="">Select Project Type</option>
+                    <option value="industry">Industrial/Commercial</option>
+                    <option value="residence">Residential</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="monthlyBill"
+                    >Monthly Electricity Bill (₹) *</label
+                  >
+                  <input
+                    type="number"
+                    id="monthlyBill"
+                    name="monthlyBill"
+                    placeholder="10000"
+                    min="0"
+                    required
+                  />
+                  <small
+                    style="
+                      color: var(--text-muted);
+                      margin-top: 0.5rem;
+                      display: block;
+                    "
+                    >For residential: estimated bill value</small
+                  >
+                </div>
+
+                <div style="display: flex; gap: 1rem">
+                  <button
+                    type="button"
+                    class="prev-btn btn btn-outline btn-lg"
+                    style="flex: 1"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Previous
+                  </button>
+                  <button
+                    type="button"
+                    class="calculate-btn btn btn-primary btn-lg"
+                    style="flex: 1"
+                  >
+                    Get Quote
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="1"></circle>
+                      <path d="M12 1v6m0 6v6"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Results Section -->
+          <div class="calculator-results"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="bg-muted">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem">
+          <h2>Why Choose Our Solar Solutions?</h2>
+        </div>
+
+        <div class="grid grid-4">
+          <div class="card text-center">
+            <div class="icon-box" style="margin: 0 auto 1rem">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"
+                ></path>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem">25 Year Warranty</h3>
+            <p>Long-term performance guarantee on all installations</p>
+          </div>
+
+          <div class="card text-center">
+            <div class="icon-box" style="margin: 0 auto 1rem">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 17"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem">Quick ROI</h3>
+            <p>Payback period of 3-5 years with significant savings</p>
+          </div>
+
+          <div class="card text-center">
+            <div class="icon-box" style="margin: 0 auto 1rem">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem">Quick Installation</h3>
+            <p>Minimal downtime with professional installation</p>
+          </div>
+
+          <div class="card text-center">
+            <div class="icon-box" style="margin: 0 auto 1rem">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                ></path>
+              </svg>
+            </div>
+            <h3 style="font-size: 1.25rem">Eco-Friendly</h3>
+            <p>Reduce carbon footprint and support sustainability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="bg-background">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 3rem">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto">
+          <div
+            style="
+              margin-bottom: 2rem;
+              padding: 2rem;
+              border: 1px solid var(--border);
+              border-radius: 1rem;
+              background: var(--card);
+            "
+          >
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem">
+              How accurate is the quote?
+            </h4>
+            <p>
+              The quote provides an estimate based on your electricity
+              consumption and location. Our engineers will conduct a site
+              assessment for a more precise estimate.
+            </p>
+          </div>
+
+          <div
+            style="
+              margin-bottom: 2rem;
+              padding: 2rem;
+              border: 1px solid var(--border);
+              border-radius: 1rem;
+              background: var(--card);
+            "
+          >
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem">
+              How long does installation take?
+            </h4>
+            <p>
+              Installation timeline depends on system size. Typically,
+              residential systems take 1-2 weeks, while commercial systems can
+              range from 2-8 weeks.
+            </p>
+          </div>
+
+          <div
+            style="
+              margin-bottom: 2rem;
+              padding: 2rem;
+              border: 1px solid var(--border);
+              border-radius: 1rem;
+              background: var(--card);
+            "
+          >
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem">
+              Do I need maintenance?
+            </h4>
+            <p>
+              Solar systems require minimal maintenance. We recommend periodic
+              cleaning and annual inspections to ensure optimal performance.
+            </p>
+          </div>
+
+          <div
+            style="
+              padding: 2rem;
+              border: 1px solid var(--border);
+              border-radius: 1rem;
+              background: var(--card);
+            "
+          >
+            <h4 style="font-weight: 600; margin-bottom: 0.5rem">
+              What's the warranty coverage?
+            </h4>
+            <p>
+              We provide 25-year panel warranty, 10-year inverter warranty, and
+              5-year workmanship warranty covering all installation and
+              equipment defects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section
+      style="
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-dark)
+        );
+        padding: 5rem 0;
+        color: white;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h2 style="color: white">Ready for Your Solar Journey?</h2>
+        <p
+          style="
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          "
+        >
+          Get your free quote today and discover how much you can save with
+          solar energy.
+        </p>
+        <a
+          href="contact.html"
+          class="btn"
+          style="
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+          "
+          >Contact Our Experts</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>About Siya Renewable</h4>
+            <p>
+              Leading solar EPC provider in Eastern India. Delivering complete
+              solar energy solutions from design to commissioning.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Solar Power Plants</a></li>
+              <li><a href="services.html">EPC Projects</a></li>
+              <li><a href="services.html">Rooftop Solar</a></li>
+              <li><a href="services.html">Consultation</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Contact Info</h4>
+            <p><strong>Phone:</strong> +91 90161 82128</p>
+            <p><strong>Email:</strong> info@siyarenewable.com</p>
+            <p><strong>Region:</strong> Jharkhand, UP & Bihar</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 Siya Renewable. All rights reserved. | Designed for
+            optimal performance on all devices.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/919016182128"
+      target="_blank"
+      class="whatsapp-btn"
+      title="Contact us on WhatsApp"
+    >
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.255.949c-1.238.503-2.59 1.445-3.297 2.957 1.047-1.6 2.635-3.19 5.031-3.993 1.092-.329 3.367-.996 4.59-.996.121 0 .234.003.346.01.036-1.471-.541-2.905-2.411-3.927z"
+        />
+      </svg>
+    </a>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
