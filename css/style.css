@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primary: #ff6b35;
-  --primary-dark: #e55828;
+  --primary: #d3a42c;
+  --primary-dark: #a6791f;
   --secondary: #0f172a;
   --secondary-light: #1e293b;
   --accent: #00d084;
@@ -17,10 +17,10 @@
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
-  --shadow-soft: 0 2px 12px rgba(255, 107, 53, 0.08);
-  --shadow-medium: 0 8px 16px rgba(255, 107, 53, 0.12);
-  --shadow-strong: 0 12px 32px rgba(255, 107, 53, 0.18);
-  --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #f97316 100%);
+  --shadow-soft: 0 2px 12px rgba(211, 164, 44, 0.08);
+  --shadow-medium: 0 8px 16px rgba(211, 164, 44, 0.12);
+  --shadow-strong: 0 12px 32px rgba(211, 164, 44, 0.18);
+  --gradient-primary: linear-gradient(135deg, #d3a42c 0%, #e6c87a 100%);
   --gradient-accent: linear-gradient(135deg, #00d084 0%, #26f0e0 100%);
   --gradient-dark: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
 }
@@ -301,7 +301,11 @@ nav.scrolled .nav-links a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 80% 50%, rgba(255, 107, 53, 0.15) 0%, transparent 50%);
+  background: radial-gradient(
+    circle at 80% 50%,
+    rgba(255, 107, 53, 0.15) 0%,
+    transparent 50%
+  );
   z-index: 1;
   pointer-events: none;
 }
@@ -418,8 +422,17 @@ nav.scrolled .nav-links a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 0% 100%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
-              radial-gradient(circle at 100% 0%, rgba(0, 208, 132, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 0% 100%,
+      rgba(255, 107, 53, 0.2) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(0, 208, 132, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -457,7 +470,11 @@ nav.scrolled .nav-links a {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 0.75rem;
-  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -492,7 +509,11 @@ section {
   align-items: center;
   gap: 0.5rem;
   padding: 0.6rem 1.25rem;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(0, 208, 132, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.15) 0%,
+    rgba(0, 208, 132, 0.1) 100%
+  );
   color: var(--primary);
   border-radius: 9999px;
   font-size: 0.875rem;
@@ -545,7 +566,11 @@ section {
   width: 64px;
   height: 64px;
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(0, 208, 132, 0.1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.15) 0%,
+    rgba(0, 208, 132, 0.1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
@@ -554,7 +579,11 @@ section {
 }
 
 .card:hover .icon-box {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.25) 0%, rgba(0, 208, 132, 0.15) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.25) 0%,
+    rgba(0, 208, 132, 0.15) 100%
+  );
   transform: scale(1.1);
 }
 
@@ -660,7 +689,6 @@ footer {
   background: var(--gradient-dark);
   color: white;
   padding: 4rem 0 1.5rem;
-  margin-top: 5rem;
 }
 
 .footer-content {
@@ -878,8 +906,8 @@ footer {
 }
 
 .star {
-  color: var(--primary);
-  font-size: 1.25rem;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
 }
 
 .testimonial-text {
@@ -900,6 +928,20 @@ footer {
   font-size: 0.875rem;
   color: var(--text-muted);
   font-weight: 500;
+}
+
+/* Brand utilities */
+.bg-brand-gradient {
+  background: var(--gradient-primary) !important;
+  color: #1a1a1a !important;
+}
+
+.text-brand {
+  color: var(--primary) !important;
+}
+
+.text-brand-strong {
+  color: var(--primary-dark) !important;
 }
 
 /* Responsive */
@@ -942,7 +984,9 @@ footer {
     font-size: 1.5rem;
   }
 
-  .grid-2, .grid-3, .grid-4 {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
     grid-template-columns: 1fr;
   }
 
@@ -1047,7 +1091,8 @@ footer {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -1093,7 +1138,11 @@ footer {
 }
 
 .step-item:hover {
-  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(0, 208, 132, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.05) 0%,
+    rgba(0, 208, 132, 0.05) 100%
+  );
   border-color: rgba(255, 107, 53, 0.2);
   transform: translateY(-4px);
 }
