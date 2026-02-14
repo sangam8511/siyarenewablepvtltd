@@ -361,7 +361,6 @@ nav.scrolled .nav-links a {
   flex-wrap: wrap;
   gap: 1.25rem;
   animation: fadeInUp 1s ease-out 0.2s backwards;
-  justify-content: center;
 }
 
 .hero-badge {
