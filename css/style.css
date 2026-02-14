@@ -7,7 +7,7 @@
 :root {
   --primary: hsl(43 75% 50%);
   --primary-dark: hsl(43 60% 30%);
-  --primary-light: hsl(43 65% 60%);
+  --primary-light: hsl(43deg 100% 48.42%);
   --secondary: #0f172a;
   --secondary-light: #1e293b;
   --accent: #00d084;
